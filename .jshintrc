@@ -6,7 +6,9 @@
     "curly": true,
     "undef": true,
     "unused": true,
+    "camelcase": false,
     "globals": {
-        "console": true
+        "console": true,
+        "GM_getResourceURL": true
     }
 }
