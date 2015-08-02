@@ -2,6 +2,7 @@
 
 ### Fonctionnalités
 
+- [ ] Lancer le script sur les pages news, seulement
 - [ ] Votes sur les news
 - [ ] Masquage / identification des news inutiles
     - [ ] Choix possible (masquer / identifier)
@@ -18,11 +19,23 @@
 - [ ] Paramètrage
     - [ ] Paramètrage léger (moins poussé que SpawnKill)
     - [ ] Au plus près de la fonctionnalité
-
-### Technique
-
-- [ ] Fichiers de dev
+- [ ] Faire fonctionner le script sur toutes les pages de news
+- [ ] Améliorer le listing des news (affichage plus concentré)
 - [ ] Faire une page sur le site de SpawnKill
-- [ ] Système de build avec Gulp
 - [ ] Mise à jour automatique
     - [ ] Intégrer les modales de SpawnKill
+
+### Roadmap Technique
+
+- [x] Scripts de dev
+- [ ] Système de build avec Gulp
+    - [ ] Séparer le code dans plusieurs fichiers
+    - [ ] Générer un seul fichier uglyfié
+    - [ ] Tâche watch
+    - [ ] Convertir le CSS en JS
+- [ ] Charger le script sur la page de news
+- [ ] Premier prototype du serveur
+    - [ ] Enregistrement des votes par URL de la news
+- [ ] Ajouter la possibilité de voter pour une news
+- [ ] Afficher le compte des votes sur les news
+- [ ] Sortie du premier prototype
