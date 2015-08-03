@@ -5,6 +5,7 @@ var fs  = require('fs');
 var gulp  = require('gulp');
 var concat  = require('gulp-concat');
 var replace  = require('gulp-replace');
+var uglify  = require('gulp-uglify');
 
 var tinylr;
 var lrPort = 35729;
@@ -57,5 +58,6 @@ gulp.task('build', function () {
         }))
         .pipe(replace('__BETTER_NEWS_VERSION__', pkg.version))
         .pipe(replace('__BETTER_NEWS_CSS__', cssString))
+        .pipe(uglify())
         .pipe(gulp.dest('./dist'));
 });

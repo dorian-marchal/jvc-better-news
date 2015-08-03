@@ -28,12 +28,12 @@
 ### Roadmap Technique
 
 - [x] Scripts de dev
-- [ ] Système de build avec Gulp
-    - [ ] Séparer le code dans plusieurs fichiers
-    - [ ] Générer un seul fichier uglyfié
-    - [ ] Tâche watch
-    - [ ] Convertir le CSS en JS
-    - [ ] Gérer le numéro de version depuis le package.json
+- [x] Système de build avec Gulp
+    - [x] Séparer le code dans plusieurs fichiers
+    - [x] Générer un seul fichier uglyfié
+    - [x] Tâche watch
+    - [x] Convertir le CSS en JS
+    - [x] Gérer le numéro de version depuis le package.json
 - [ ] Documenter le build et les dépendances
 - [ ] Charger le script sur la page de news
 - [ ] Premier prototype du serveur
