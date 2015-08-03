@@ -34,6 +34,7 @@
     - [ ] Tâche watch
     - [ ] Convertir le CSS en JS
     - [ ] Gérer le numéro de version depuis le package.json
+- [ ] Documenter le build et les dépendances
 - [ ] Charger le script sur la page de news
 - [ ] Premier prototype du serveur
     - [ ] Enregistrement des votes par URL de la news

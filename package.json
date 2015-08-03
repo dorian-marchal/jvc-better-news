@@ -18,6 +18,8 @@
   "homepage": "https://github.com/dorian-marchal/jvc-better-news#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-replace": "^0.5.3",
     "tiny-lr": "^0.1.6"
   }
 }
