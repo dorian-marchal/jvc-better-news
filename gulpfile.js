@@ -1,6 +1,7 @@
 'use strict';
 /* jshint node:true */
 
+var fs  = require('fs');
 var gulp  = require('gulp');
 var concat  = require('gulp-concat');
 var replace  = require('gulp-replace');
@@ -43,10 +44,13 @@ gulp.task('build', function () {
     // Importer le CSS (pas de point d'ancrage, en dur))
     // Gérer le numéro de version depuis package.json (<version>)
 
-    var pkg = require('./package.json')
+    var pkg = require('./package.json');
+    var css = fs.readFileSync('./css/style.css', { encoding: 'UTF-8' });
+    var cssString = css.replace(/\n/g, '').replace(/'/g, '\\\'').replace(/ +/g, ' ');
 
     return gulp.src(['./js/userscript-header.js', './js/main.js'])
         .pipe(concat('jvc-better-news.user.js'))
-        .pipe(replace('<better-news-version>', pkg.version))
+        .pipe(replace('__BETTER_NEWS_VERSION__', pkg.version))
+        .pipe(replace('__BETTER_NEWS_CSS__', cssString))
         .pipe(gulp.dest('./dist'));
 });

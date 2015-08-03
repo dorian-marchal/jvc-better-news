@@ -1,7 +1,11 @@
 'use strict';
 
+// Ajoute le CSS à la page (se fait à l'étape de build)
+/* jshint -W064 */
+GM_addStyle('__BETTER_NEWS_CSS__');
+
 window.BetterNews = {
-  version: '<better-news-version>',
+  version: '__BETTER_NEWS_VERSION__',
 
   init: function() {
     console.log('Initialisation de Better News...');
