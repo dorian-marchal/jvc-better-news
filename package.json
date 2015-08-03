@@ -1,0 +1,23 @@
+{
+  "name": "jvc-better-news",
+  "version": "0.1.0",
+  "description": "JVC Better News est une extension permettant de noter et masquer les news inutiles sur jeuxvideo.com",
+  "main": "dist/jvc-better-news.user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorian-marchal/jvc-better-news.git"
+  },
+  "author": "Dorian Marchal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dorian-marchal/jvc-better-news/issues"
+  },
+  "homepage": "https://github.com/dorian-marchal/jvc-better-news#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "tiny-lr": "^0.1.6"
+  }
+}
