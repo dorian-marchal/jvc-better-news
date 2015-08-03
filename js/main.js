@@ -1,33 +1,39 @@
-'use strict';
+(function() {
+  'use strict';
 
-// Ajoute le CSS à la page (se fait à l'étape de build)
-/* jshint -W064 */
-GM_addStyle('__BETTER_NEWS_CSS__');
+  // Ajoute le CSS à la page (se fait au build avec gulp)
+  /* jshint -W064 */
+  GM_addStyle('__BETTER_NEWS_CSS__');
 
-window.BetterNews = {
-  version: '__BETTER_NEWS_VERSION__',
+  // Inclut les scripts annexes
+  // __BETTER_NEWS_INCLUDE__ js/utils.js
 
-  init: function() {
-    console.log('Initialisation de Better News...');
-  },
+  window.BetterNews = {
+    version: '__BETTER_NEWS_VERSION__',
 
-  initWhenReady: function() {
-    var runInIframe = window.top !== window.self;
+    init: function() {
+      console.log('Initialisation de Better News...');
+    },
 
-    // On ne charge pas le script dans les iframes
-    if (!runInIframe) {
+    initWhenReady: function() {
+      var runInIframe = window.top !== window.self;
 
-      // document.ready ne fonctionne pas sur GM at document-start
-      // Pour vérifier que le DOM est chargé, on vérifie que la fiv .stats est présente.
-      var checkDomReady = setInterval(function() {
+      // On ne charge pas le script dans les iframes
+      if (!runInIframe) {
 
-        if (document.getElementsByClassName('stats').length > 0) {
-          clearInterval(checkDomReady);
-          window.BetterNews.init();
-        }
-      }, 300);
-    }
-  },
-};
+        // document.ready ne fonctionne pas sur GM at document-start
+        // Pour vérifier que le DOM est chargé, on vérifie que la fiv .stats est présente.
+        var checkDomReady = setInterval(function() {
 
-window.BetterNews.initWhenReady();
+          if (document.getElementsByClassName('stats').length > 0) {
+            clearInterval(checkDomReady);
+            window.BetterNews.init();
+          }
+        }, 300);
+      }
+    },
+  };
+
+  window.BetterNews.initWhenReady();
+
+})();
