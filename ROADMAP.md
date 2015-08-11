@@ -24,16 +24,12 @@
 - [ ] Faire une page sur le site de SpawnKill
 - [ ] Mise à jour automatique
     - [ ] Intégrer les modales de SpawnKill
+- [ ] Empêcher les votes multiples
 
 ### Roadmap Technique
 
-- [x] Scripts de dev
-- [x] Système de build avec Gulp
-    - [x] Séparer le code dans plusieurs fichiers
-    - [x] Générer un seul fichier uglyfié
-    - [x] Tâche watch
-    - [x] Convertir le CSS en JS
-    - [x] Gérer le numéro de version depuis le package.json
+- [ ] Serveur
+    - [ ] id / url / vote_type_id
 - [ ] Documenter le build et les dépendances
 - [ ] Charger le script sur la page de news
 - [ ] Premier prototype du serveur
