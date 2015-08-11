@@ -1,3 +1,4 @@
 /local-dev/local-dev-config.sh
-/node_modules
+node_modules
+vendor
 /server/config.json

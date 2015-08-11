@@ -1,0 +1,14 @@
+{
+    "name": "dorian-marchal/jvc-better-news-server",
+    "authors": [
+        {
+            "name": "dorian-marchal",
+            "email": "marchal.dorian@gmail.com"
+        }
+    ],
+    "require": {
+        "raveren/kint": "^1.0",
+        "coalesce/coalesce": "^0.3.0",
+        "lichtner/fluentpdo": "^1.0"
+    }
+}
