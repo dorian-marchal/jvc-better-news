@@ -40,11 +40,6 @@ gulp.task('livebuild', function () {
 
 gulp.task('build', function () {
 
-    // Part du js/main.js
-    // Concatener les scripts (Depuis les includes) et supprimer les includes
-    // Importer le CSS (pas de point d'ancrage, en dur))
-    // Gérer le numéro de version depuis package.json (<version>)
-
     var pkg = require('./package.json');
     var css = fs.readFileSync('./css/style.css', { encoding: 'UTF-8' });
     var cssString = css.replace(/\n/g, '').replace(/'/g, '\\\'').replace(/ +/g, ' ');
