@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        JVC Better News
+// @name        JVC Better News [Beta]
 // @description JVC Better News est une extension permettant de noter et masquer les news inutiles sur jeuxvideo.com
 // @author      Spixel_
 // @namespace   http://spawnkill.fr
