@@ -29,7 +29,7 @@
 ### Roadmap Technique
 
 - [ ] Serveur
-    - [ ] id / url / vote_type_id
+    - [ ] id / user_ip / url / vote_type_id
 - [ ] Documenter le build et les dépendances
 - [ ] Charger le script sur la page de news
 - [ ] Premier prototype du serveur
