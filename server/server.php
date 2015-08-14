@@ -37,6 +37,19 @@ switch ($action) {
             $res['status'] = 'vote ok';
         }
         break;
+
+    case 'getVotes':
+
+        $urls = explode(',', val($_GET, 'urls'));
+        foreach ($urls as $url) {
+            $votes = $qb->from('votes')->where('url = ?', $url)->fetchAll();
+            $res[$url] = [
+                'voteCount' => 0,
+                'score' => 0,
+            ];
+        }
+
+        break;
     default:
         break;
 }
