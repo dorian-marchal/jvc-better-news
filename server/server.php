@@ -44,9 +44,18 @@ switch ($action) {
         foreach ($urls as $url) {
             $votes = $qb->from('votes')->where('url = ?', $url)->fetchAll();
             $res[$url] = [
-                'voteCount' => 0,
+                'voteCount' => count($votes),
                 'score' => 0,
             ];
+
+            foreach ($votes as $vote) {
+                if ($vote['vote_type_id'] == 1) {
+                    $res[$url]['score']++;
+                }
+                else {
+                    $res[$url]['score']--;
+                }
+            }
         }
 
         break;
