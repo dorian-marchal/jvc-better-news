@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  window.Utils = {
+  window.modules.Utils = {
 
   };
 })();

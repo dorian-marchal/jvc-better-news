@@ -6,7 +6,11 @@
   GM_addStyle('__BETTER_NEWS_CSS__');
 
   // Inclut les scripts annexes
+  window.modules = {};
   // __BETTER_NEWS_INCLUDE__ js/utils.js
+  var Utils = window.modules.Utils;
+  // __BETTER_NEWS_INCLUDE__ js/news.js
+  var News = window.modules.News;
 
   window.BetterNews = {
     version: '__BETTER_NEWS_VERSION__',
@@ -14,9 +18,14 @@
     init: function() {
       this.detectPage();
       console.log('Initialisation de Better News...');
+
       // On ne lance le script que sur la page des news
       if(!this.onNewsPage && !this.onNewsListPage) {
         return;
+      }
+
+      if (this.onNewsPage) {
+        var news = News.loadFromCurrentPage();
       }
     },
 
