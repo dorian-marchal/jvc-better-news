@@ -12,14 +12,20 @@
     version: '__BETTER_NEWS_VERSION__',
 
     init: function() {
+      this.detectPage();
       console.log('Initialisation de Better News...');
     },
 
-    isOnNewsPage: function() {
-      return location.href.match(/^https?:\/\/www\.jeuxvideo\.com\/toutes-les-news/);
+    onNewsPage: false,
+    onNewsListPage: false,
+
+    detectPage: function() {
+      this.onNewsListPage = location.href.match(/^https?:\/\/www\.jeuxvideo\.com\/toutes-les-news/);
+      this.onNewsPage = location.href.match(/^https?:\/\/www\.jeuxvideo\.com\/news\/\d+/);
     },
 
     initWhenReady: function() {
+      var that = this;
       var runInIframe = window.top !== window.self;
 
       // On ne charge pas le script dans les iframes
@@ -31,7 +37,7 @@
 
           if (document.getElementsByClassName('stats').length > 0) {
             clearInterval(checkDomReady);
-            window.BetterNews.init();
+            that.init();
           }
         }, 300);
       }
