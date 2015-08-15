@@ -14,6 +14,10 @@
     init: function() {
       this.detectPage();
       console.log('Initialisation de Better News...');
+      // On ne lance le script que sur la page des news
+      if(!this.onNewsPage && !this.onNewsListPage) {
+        return;
+      }
     },
 
     onNewsPage: false,
