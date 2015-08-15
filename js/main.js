@@ -15,6 +15,10 @@
       console.log('Initialisation de Better News...');
     },
 
+    isOnNewsPage: function() {
+      return location.href.match(/^https?:\/\/www\.jeuxvideo\.com\/toutes-les-news/);
+    },
+
     initWhenReady: function() {
       var runInIframe = window.top !== window.self;
 
