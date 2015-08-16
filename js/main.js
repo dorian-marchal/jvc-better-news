@@ -26,6 +26,7 @@
 
       if (this.onNewsPage) {
         var news = News.loadFromCurrentPage();
+        news.addVoteButtons();
       }
     },
 

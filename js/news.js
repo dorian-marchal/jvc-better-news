@@ -19,5 +19,10 @@
 
       url: null,
       el: null,
+
+      addVoteButtons: function() {
+        var img = this.el.querySelector('.mask-img');
+        console.log(img);
+      },
   };
 })();
