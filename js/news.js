@@ -21,8 +21,22 @@
       el: null,
 
       addVoteButtons: function() {
-        var img = this.el.querySelector('.mask-img');
-        console.log(img);
+        var imgWrapper = this.el.querySelector('.mask-img');
+
+        var buttonsWrapper = document.createElement('div');
+        buttonsWrapper.classList.add('news-vote-wrapper');
+
+        var createVoteButton = function(specificClass) {
+          var voteButton = document.createElement('button');
+          voteButton.classList.add('news-vote', specificClass);
+          buttonsWrapper.appendChild(voteButton);
+          return voteButton;
+        };
+
+        createVoteButton('vote-less');
+        createVoteButton('vote-more');
+
+        imgWrapper.appendChild(buttonsWrapper);
       },
   };
 })();
