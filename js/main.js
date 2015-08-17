@@ -6,9 +6,9 @@
   GM_addStyle('__BETTER_NEWS_CSS__');
 
   // les "modules" sont chargés au build, avec gulp
+  window.config = '__BETTER_NEWS_MODULE_Config';
   var Utils = '__BETTER_NEWS_MODULE_Utils';
   var News = '__BETTER_NEWS_MODULE_News';
-  var Config = '__BETTER_NEWS_MODULE_Config';
 
   window.BetterNews = {
     version: '__BETTER_NEWS_VERSION__',
