@@ -1,21 +1,21 @@
 (function() {
   'use strict';
 
-  window.modules.News = function() {
+  var News = function() {
   };
 
   /**
    * Génère un objet news à partir des infos sur la page courante
    */
-  window.modules.News.loadFromCurrentPage = function() {
-    var news = new window.modules.News();
+  News.loadFromCurrentPage = function() {
+    var news = new News();
     news.url = location.href;
     news.el = document.getElementsByTagName('article')[0];
     return news;
   };
 
-  window.modules.News.prototype = {
-      constructor: window.modules.News,
+  News.prototype = {
+      constructor: News,
 
       url: null,
       el: null,
@@ -49,4 +49,6 @@
         imgWrapper.appendChild(buttonsWrapper);
       },
   };
+
+  return News;
 })();

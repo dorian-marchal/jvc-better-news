@@ -35,7 +35,7 @@ gulp.task('livereload', function () {
 gulp.task('livebuild', function () {
     // Quand une source change, on build
     gulp.watch('css/*', ['build']);
-    gulp.watch('js/*', ['build']);
+    gulp.watch('js/**/*', ['build']);
 });
 
 gulp.task('build', function () {
@@ -46,9 +46,9 @@ gulp.task('build', function () {
 
     return gulp.src(['./js/userscript-header.js', './js/main.js'])
         .pipe(concat('jvc-better-news.user.js'))
-        // https://regex101.com/r/oF6zU7/3
-        .pipe(replace(/^\s*\/\/\s+__BETTER_NEWS_INCLUDE__\s+(.+)$/gm, function (toReplace, filename) {
-            var toIncludeJs = fs.readFileSync('./' + filename, { encoding: 'UTF-8' });
+        // https://regex101.com/r/oF6zU7/4
+        .pipe(replace(/'__BETTER_NEWS_MODULE_+(.+)';/gm, function (toReplace, filename) {
+            var toIncludeJs = fs.readFileSync('./js/modules/' + filename + '.js', { encoding: 'UTF-8' });
             return toIncludeJs;
         }))
         .pipe(replace('__BETTER_NEWS_VERSION__', pkg.version))

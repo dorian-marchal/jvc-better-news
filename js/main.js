@@ -5,12 +5,10 @@
   /* jshint -W064 */
   GM_addStyle('__BETTER_NEWS_CSS__');
 
-  // Inclut les scripts annexes
-  window.modules = {};
-  // __BETTER_NEWS_INCLUDE__ js/utils.js
-  var Utils = window.modules.Utils;
-  // __BETTER_NEWS_INCLUDE__ js/news.js
-  var News = window.modules.News;
+  // les "modules" sont chargés au build, avec gulp
+  var Utils = '__BETTER_NEWS_MODULE_Utils';
+  var News = '__BETTER_NEWS_MODULE_News';
+  var Config = '__BETTER_NEWS_MODULE_Config';
 
   window.BetterNews = {
     version: '__BETTER_NEWS_VERSION__',
